@@ -4,7 +4,7 @@ export default function Education() {
   return (
     <section id="educacion" className="min-h-screen py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-bold font-orbitron text-center text-white mb-16">
+        <h2 className="text-5xl font-bold text-center text-white mb-16">
           Educación
         </h2>
 
@@ -21,9 +21,7 @@ export default function Education() {
               />
             </div>
 
-            <h3 className="text-2xl font-orbitron text-white mb-4">
-              Bachillerato
-            </h3>
+            <h3 className="text-2xl text-white mb-4">Bachillerato</h3>
 
             <p className="text-lg text-gray-300 ">
               U.E Virgen de la Chiquinquirá

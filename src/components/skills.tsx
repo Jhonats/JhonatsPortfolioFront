@@ -1,38 +1,35 @@
 "use client";
-
-import { useState } from "react";
 import { DiJava, DiJavascript } from "react-icons/di";
 import { SiTypescript } from "react-icons/si";
 
 const skillsData = [
   {
     language: "Java",
-    logo: <DiJava />,
+    logo: DiJava,
     skills: [
-      { name: "Java SE 8, 11 y 17", level: 85 },
-      { name: "JPA", level: 80 },
-      { name: "JDBC", level: 75 },
-      { name: "Hibernate", level: 70 },
-      { name: "Jakarta", level: 65 },
+      { name: "Java SE 8, 11 y 17", level: 50 },
+      { name: "JPA & JDBC", level: 55 },
+      { name: "Hibernate", level: 50 },
+      { name: "Jakarta EE", level: 50 },
     ],
     frameworks: [
       {
         name: "Spring Boot",
         logo: "🍃",
         skills: [
-          { name: "Spring Boot", level: 85 },
-          { name: "Spring Security", level: 80 },
-          { name: "Spring Boot Cloud", level: 70 },
+          { name: "Spring Boot", level: 50 },
+          { name: "Spring Security", level: 40 },
+          { name: "Spring Boot Cloud", level: 40 },
         ],
       },
     ],
   },
   {
     language: "JavaScript",
-    logo: <DiJavascript />,
+    logo: DiJavascript,
     skills: [
       { name: "Fetch", level: 90 },
-      { name: "DOM", level: 85 },
+      { name: "DOM", level: 70 },
       { name: "ECMAScript", level: 80 },
       { name: "Asyncronism", level: 75 },
     ],
@@ -41,20 +38,20 @@ const skillsData = [
         name: "Next.js",
         logo: "⚡",
         skills: [
-          { name: "Parallel Routing", level: 75 },
-          { name: "Server Side Rendering", level: 80 },
-          { name: "Hidratation", level: 70 },
+          { name: "Parallel Routing", level: 40 },
+          { name: "Server Side Rendering", level: 50 },
+          { name: "Hidratation", level: 50 },
         ],
       },
     ],
   },
   {
     language: "TypeScript",
-    logo: <SiTypescript />,
+    logo: SiTypescript,
     skills: [
-      { name: "Type Safety", level: 85 },
+      { name: "Type Safety", level: 60 },
       { name: "Interfaces", level: 80 },
-      { name: "Generics", level: 75 },
+      { name: "Generics", level: 40 },
       { name: "Decorators", level: 70 },
     ],
     frameworks: [],
@@ -75,9 +72,9 @@ export default function Skills() {
               key={index}
               className="bg-black/30 backdrop-blur-sm rounded-lg p-6 border border-gray-600/30 hover:border-red-600/50 transition-all duration-300"
             >
-              <div className="text-center mb-6">
-                <div className="text-5xl mb-2 justify-center text-center flex">
-                  {skill.logo}
+              <div className="text-center mb-6 hover:text-red-500 transition-colors duration-300">
+                <div className="text-5xl mb-2 flex justify-center">
+                  <skill.logo />
                 </div>
                 <h3 className="text-2xl text-white">{skill.language}</h3>
               </div>
