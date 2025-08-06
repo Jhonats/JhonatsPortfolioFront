@@ -5,21 +5,20 @@ import Image from "next/image";
 import { certificates } from "@/constants/certificates";
 
 const importanceStyles = {
-  sencillo:
+  basic:
     "border-green-500 shadow-green-500/30 bg-gradient-to-br from-green-900/20 to-green-800/10",
-  intermedio:
+  medium:
     "border-purple-500 shadow-purple-500/30 bg-gradient-to-br from-purple-900/20 to-purple-800/10",
-  complejo:
-    "border-yellow-500 shadow-yellow-500/50 bg-gradient-to-br from-yellow-900/20 to-yellow-800/10 border-wave-yellow",
-  destacado:
+  hard: "border-yellow-500 shadow-yellow-500/50 bg-gradient-to-br from-yellow-900/20 to-yellow-800/10 border-wave-yellow",
+  rated:
     "border-red-500 shadow-red-500/70 bg-gradient-to-br from-red-900/30 to-red-800/20 border-wave-red",
 };
 
 const importanceColors = {
-  sencillo: "text-green-400",
-  intermedio: "text-purple-400",
-  complejo: "text-yellow-400 wave-text-yellow",
-  destacado: "text-red-400 wave-text-red",
+  basic: "text-green-400",
+  medium: "text-purple-400",
+  hard: "text-yellow-400 wave-text-yellow",
+  rated: "text-red-400 wave-text-red",
 };
 
 export default function Certificates() {
@@ -82,9 +81,9 @@ export default function Certificates() {
                 <Image
                   src={cert.image || "/placeholder.svg"}
                   alt={cert.title}
-                  width={300}
-                  height={200}
-                  className="w-full h-36 sm:h-44 md:h-48 object-cover rounded-lg"
+                  width={400}
+                  height={300}
+                  className="sm:h-44 md:h-60 object-contain rounded-lg"
                 />
               </div>
 
@@ -99,7 +98,15 @@ export default function Certificates() {
               </h3>
 
               <p className="text-xs sm:text-sm text-gray-300 mb-1">
-                <span className="text-red-400">Emitido por:</span>{" "}
+                <span
+                  className={`${
+                    importanceColors[
+                      cert.importance as keyof typeof importanceColors
+                    ]
+                  }`}
+                >
+                  Emitido por:
+                </span>{" "}
                 {cert.academy}
               </p>
 
