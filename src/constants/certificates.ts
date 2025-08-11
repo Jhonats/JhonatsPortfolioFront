@@ -2,9 +2,9 @@ export const certificates = [
   {
     id: 1,
     title: "Excelencia Académica",
-    academy: "Platzi",
-    date: "10-03-2025",
-    image: "/certificates/next.js.png",
+    academy: "IUTEPAL",
+    date: "09-06-2023",
+    image: "/certificates/IUTEPAL.JPG",
     importance: "rated",
   },
   {
