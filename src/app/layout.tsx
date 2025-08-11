@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
-import NavBar from "@/components/navbar";
+import NavBar from "@/components/Navbar";
 
 const orbitron = Orbitron({
   subsets: ["latin"],
